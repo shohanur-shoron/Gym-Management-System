@@ -1,0 +1,4206 @@
+{
+	"info": {
+		"_postman_id": "b8caea1b-8a11-40ae-a8e2-45dc541ca2f1",
+		"name": "Gym Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37259871"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "manager@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager.bd..com.2026",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/auth/login/",
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:30:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "548"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2ODU1NTgwOCwiaWF0IjoxNzY4NDY5NDA4LCJqdGkiOiJmNzEyYjNjNTE4M2I0YTc2YjM3MzZiMGZiOGU3OWVmZCIsInVzZXJfaWQiOiIxIn0.mKcRPNqQt-5WL8rxp0ym5-D68t7jBj73aOBJsgkasoE\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4NDY5NzA4LCJpYXQiOjE3Njg0Njk0MDgsImp0aSI6ImZkYWI3MTVjNGI4MjRlYmNiZmM2ZTIyODVmOTg0MDQ1IiwidXNlcl9pZCI6IjEifQ.ryxIzNyR5K1UHdxnH5MaJc6HOCw2tw3PZyFQocX8PoA\",\n    \"role\": \"ADMIN\",\n    \"gym_branch\": null,\n    \"email\": \"admin@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "{{refresh_token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/token/refresh/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Refresh Token",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "refresh",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/auth/token/refresh/",
+									"path": [
+										"auth",
+										"token",
+										"refresh",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:33:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzY4NDY5OTMxLCJpYXQiOjE3Njg0Njk2MzEsImp0aSI6IjEyNTFjNDNjMWUzZjRmN2RhOWY2YjNkOTgwNzk5YWZkIiwidXNlcl9pZCI6IjEifQ.iqQMHmfl2LDNk0Xj6VAs0tDkmgGfhGVc8ZLY4x77gKg\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc2ODU1NjAzMSwiaWF0IjoxNzY4NDY5NjMxLCJqdGkiOiIzMGUxZDc4ZDc2Zjc0ZWIyYTRhMTc3YWQ5MzFhZDUwYyIsInVzZXJfaWQiOiIxIn0.JrILFLdmL0pAyKFvgmP2ASjhM5F8uTzE1k5FnEwuG-8\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Super Admin",
+			"item": [
+				{
+					"name": "Get Admin Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/profile/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Admin Profile 401",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/auth/profile/",
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:47:35 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "WWW-Authenticate",
+									"value": "Bearer realm=\"api\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Given token not valid for any token type\",\n    \"code\": \"token_not_valid\",\n    \"messages\": [\n        {\n            \"token_class\": \"AccessToken\",\n            \"token_type\": \"access\",\n            \"message\": \"Token is expired\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get Admin Profile 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:51:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"admin@gmail.com\",\n    \"first_name\": \"Shohanur\",\n    \"last_name\": \"Shoron\",\n    \"role\": \"ADMIN\",\n    \"gym_branch\": null,\n    \"is_active\": true,\n    \"created_at\": \"2026-01-14T22:47:00.744200+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Admin Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "1234",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "admin.bd..com.2026",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/change-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Admin Password 400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/auth/change-password/",
+									"path": [
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:54:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"new_password\": [\n        \"This password is too short. It must contain at least 8 characters.\",\n        \"This password is too common.\",\n        \"This password is entirely numeric.\"\n    ]\n}"
+						},
+						{
+							"name": "Change Admin Password 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "1234",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "admin.bd..com.2026",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/change-password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:55:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Password updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View All Activity Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/activity-logs/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"activity-logs",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View All Activity Logs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/auth/activity-logs/",
+									"path": [
+										"auth",
+										"activity-logs",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 09:58:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "691"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 4,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T15:55:40.754763+06:00\",\n            \"user\": 1\n        },\n        {\n            \"id\": 3,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T15:51:02.654107+06:00\",\n            \"user\": 1\n        },\n        {\n            \"id\": 2,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T15:30:08.913659+06:00\",\n            \"user\": 1\n        },\n        {\n            \"id\": 1,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T15:13:16.765960+06:00\",\n            \"user\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "manager@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "manager.bd..com.2026",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "MANAGER",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Wick",
+									"type": "text"
+								},
+								{
+									"key": "gym_branch",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone_number",
+									"value": "01723077960",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "manager@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "manager.bd..com.2026",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "MANAGER",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "John",
+											"type": "text"
+										},
+										{
+											"key": "last_name",
+											"value": "Wick",
+											"type": "text"
+										},
+										{
+											"key": "gym_branch",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "phone_number",
+											"value": "01723077960",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "M",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/auth/users/",
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:01:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"manager@gmail.com\",\n    \"role\": \"MANAGER\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Wick\",\n    \"gym_branch\": 1,\n    \"phone_number\": \"01723077960\",\n    \"gender\": \"M\"\n}"
+						},
+						{
+							"name": "Create New User 400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"triner@gmail.com\",\r\n    \"password\": \"triner.bd..com.2026\",\r\n    \"role\": \"TRAINER\",\r\n    \"first_name\": \"David\",\r\n    \"last_name\": \"Martinez\",\r\n    \"gym_branch\": 1,\r\n    \"phone_number\": \"555-0202\",\r\n    \"gender\": \"M\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:04:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"non_field_errors\": [\n        \"This branch already has the maximum of 3 trainers.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/auth/users/",
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:03:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "433"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"email\": \"manager@gmail.com\",\n            \"first_name\": \"John\",\n            \"last_name\": \"Wick\",\n            \"role\": \"MANAGER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:01:46.351714+06:00\"\n        },\n        {\n            \"id\": 1,\n            \"email\": \"admin@gmail.com\",\n            \"first_name\": \"Shohanur\",\n            \"last_name\": \"Shoron\",\n            \"role\": \"ADMIN\",\n            \"gym_branch\": null,\n            \"is_active\": true,\n            \"created_at\": \"2026-01-14T22:47:00.744200+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/users/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/auth/users/:id/",
+									"path": [
+										"auth",
+										"users",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:06:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"email\": \"manager@gmail.com\",\n    \"first_name\": \"John\",\n    \"last_name\": \"Wick\",\n    \"role\": \"MANAGER\",\n    \"gym_branch\": 1,\n    \"gym_branch_name\": \"Location 1\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T16:01:46.351714+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone_number",
+									"value": "01700000000",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "manager@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "MANAGER",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "Rahim",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/users/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone_number",
+											"value": "01700000000",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "manager@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "MANAGER",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "first_name",
+											"value": "Rahim",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/auth/users/:id/",
+									"path": [
+										"auth",
+										"users",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:15:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"manager@gmail.com\",\n    \"role\": \"MANAGER\",\n    \"first_name\": \"Rahim\",\n    \"last_name\": \"Wick\",\n    \"gym_branch\": 1,\n    \"phone_number\": \"01700000000\",\n    \"gender\": \"M\",\n    \"is_active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Gym Branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Location 2",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "Farmgate",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/gyms/branches/create/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"gyms",
+								"branches",
+								"create",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Gym Branch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Location 2",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "Farmgate",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/gyms/branches/create/",
+									"path": [
+										"gyms",
+										"branches",
+										"create",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:18:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"name\": \"Location 2\",\n    \"location\": \"Farmgate\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T16:18:23.758843+06:00\",\n    \"updated_at\": \"2026-01-15T16:18:23.758843+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Gym Branches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/gyms/branches/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"gyms",
+								"branches",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Gym Branches",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/gyms/branches/",
+									"path": [
+										"gyms",
+										"branches",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:19:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "383"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"name\": \"Location 1\",\n            \"location\": \"Dhanmondi 32\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T15:45:46.934364+06:00\",\n            \"updated_at\": \"2026-01-15T15:45:46.934364+06:00\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Location 2\",\n            \"location\": \"Farmgate\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:18:23.758843+06:00\",\n            \"updated_at\": \"2026-01-15T16:18:23.758843+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Branch Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/gyms/branches/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"gyms",
+								"branches",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Branch Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "/gyms/branches/:id/",
+									"path": [
+										"gyms",
+										"branches",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:20:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "167"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Location 1\",\n    \"location\": \"Dhanmondi 32\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T15:45:46.934364+06:00\",\n    \"updated_at\": \"2026-01-15T15:45:46.934364+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Branch",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Location 1",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "kalabagan",
+									"type": "text"
+								},
+								{
+									"key": "is_active",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/gyms/branches/:id/update/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"gyms",
+								"branches",
+								":id",
+								"update",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Branch",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Location 1",
+											"type": "text"
+										},
+										{
+											"key": "location",
+											"value": "kalabagan",
+											"type": "text"
+										},
+										{
+											"key": "is_active",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "/gyms/branches/:id/update/",
+									"path": [
+										"gyms",
+										"branches",
+										":id",
+										"update",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:22:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "PUT, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Location 1\",\n    \"location\": \"kalabagan\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T15:45:46.934364+06:00\",\n    \"updated_at\": \"2026-01-15T16:22:36.425689+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List All Workout Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Workout Plan Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Workout Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Task Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gym Manager",
+			"item": [
+				{
+					"name": "Get Manager Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/profile/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Manager Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:32:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"email\": \"manager@gmail.com\",\n    \"first_name\": \"Rahim\",\n    \"last_name\": \"Wick\",\n    \"role\": \"MANAGER\",\n    \"gym_branch\": 1,\n    \"gym_branch_name\": \"Location 1\",\n    \"phone_number\": \"01700000000\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T16:01:46.351714+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Manager Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "manager.bd..com.2027",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "manager.bd..com.2026",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/change-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Manager Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "old_password",
+											"value": "manager.bd..com.2026",
+											"type": "text"
+										},
+										{
+											"key": "new_password",
+											"value": "manager.bd..com.2027",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/change-password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:34:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Password updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View My Activity Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/activity-logs/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"activity-logs",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View My Activity Logs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/activity-logs/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"activity-logs",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:35:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 7,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T16:24:18.380498+06:00\",\n            \"user\": 3\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Branch Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Branch Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:44:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2523"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 11,\n    \"next\": \"http://127.0.0.1:8000/auth/users/?limit=10&offset=10\",\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 18,\n            \"email\": \"rachel.lewis@example.com\",\n            \"first_name\": \"Rachel\",\n            \"last_name\": \"Lewis\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0310\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:42:37.340768+06:00\"\n        },\n        {\n            \"id\": 16,\n            \"email\": \"amanda.clark@example.com\",\n            \"first_name\": \"Amanda\",\n            \"last_name\": \"Clark\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0308\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:42:10.995939+06:00\"\n        },\n        {\n            \"id\": 14,\n            \"email\": \"natalie.white@example.com\",\n            \"first_name\": \"Natalie\",\n            \"last_name\": \"White\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0306\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:52.594256+06:00\"\n        },\n        {\n            \"id\": 12,\n            \"email\": \"olivia.garcia@example.com\",\n            \"first_name\": \"Olivia\",\n            \"last_name\": \"Garcia\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0304\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:34.306465+06:00\"\n        },\n        {\n            \"id\": 10,\n            \"email\": \"sophia.anderson@example.com\",\n            \"first_name\": \"Sophia\",\n            \"last_name\": \"Anderson\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0302\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:16.479683+06:00\"\n        },\n        {\n            \"id\": 9,\n            \"email\": \"james.taylor@example.com\",\n            \"first_name\": \"James\",\n            \"last_name\": \"Taylor\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0301\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:07.585016+06:00\"\n        },\n        {\n            \"id\": 8,\n            \"email\": \"emily.brown@example.com\",\n            \"first_name\": \"Emily\",\n            \"last_name\": \"Brown\",\n            \"role\": \"TRAINER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0203\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:40:52.933036+06:00\"\n        },\n        {\n            \"id\": 7,\n            \"email\": \"david.martinez@example.com\",\n            \"first_name\": \"David\",\n            \"last_name\": \"Martinez\",\n            \"role\": \"TRAINER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0202\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:40:37.109279+06:00\"\n        },\n        {\n            \"id\": 6,\n            \"email\": \"jessica.williams@example.com\",\n            \"first_name\": \"Jessica\",\n            \"last_name\": \"Williams\",\n            \"role\": \"TRAINER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0201\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:40:25.651907+06:00\"\n        },\n        {\n            \"id\": 4,\n            \"email\": \"sarah.johnson@example.com\",\n            \"first_name\": \"Sarah\",\n            \"last_name\": \"Johnson\",\n            \"role\": \"MANAGER\",\n            \"gym_branch\": 1,\n            \"gym_branch_name\": \"Location 1\",\n            \"phone_number\": \"555-0101\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:40:03.085948+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/users/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/users/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:45:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"email\": \"sarah.johnson@example.com\",\n    \"first_name\": \"Sarah\",\n    \"last_name\": \"Johnson\",\n    \"role\": \"MANAGER\",\n    \"gym_branch\": 1,\n    \"gym_branch_name\": \"Location 1\",\n    \"phone_number\": \"555-0101\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T16:40:03.085948+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"olivia.garcia@example.com\",\r\n    \"first_name\": \"Olivia\",\r\n    \"last_name\": \"Garcia\",\r\n    \"role\": \"MEMBER\",\r\n    \"gym_branch\": 1,\r\n    \"gym_branch_name\": \"Location 1\",\r\n    \"phone_number\": \"555-0304-0000\",\r\n    \"is_active\": true,\r\n    \"created_at\": \"2026-01-15T16:41:34.306465+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/users/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User Details",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"olivia.garcia@example.com\",\r\n    \"first_name\": \"Olivia\",\r\n    \"last_name\": \"Garcia\",\r\n    \"role\": \"MEMBER\",\r\n    \"gym_branch\": 1,\r\n    \"gym_branch_name\": \"Location 1\",\r\n    \"phone_number\": \"555-0304-0000\",\r\n    \"is_active\": true,\r\n    \"created_at\": \"2026-01-15T16:41:34.306465+06:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/users/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 10:51:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "172"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"olivia.garcia@example.com\",\n    \"role\": \"MEMBER\",\n    \"first_name\": \"Olivia\",\n    \"last_name\": \"Garcia\",\n    \"gym_branch\": 1,\n    \"phone_number\": \"555-0304-0000\",\n    \"gender\": \"F\",\n    \"is_active\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "List Branch Workout Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Branch Workout Plans",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:50:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2167"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 5,\n            \"title\": \"Core and Abs Sculpting\",\n            \"description\": \"Targeted core workout featuring planks, Russian twists, leg raises, and bicycle crunches. Build a strong, defined midsection while improving overall stability and posture in just 20 minutes.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:23:26.842183+06:00\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Powerlifting Program - 12 Weeks\",\n            \"description\": \"Structured 12-week powerlifting program focused on increasing your squat, bench press, and deadlift maxes. Includes progressive overload, deload weeks, and accessory work for optimal strength gains.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": false,\n            \"created_at\": \"2026-01-15T17:23:18.660228+06:00\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Yoga Flow for Flexibility\",\n            \"description\": \"Gentle yoga sequences focusing on improving flexibility, balance, and mindfulness. Includes sun salutations, warrior poses, and deep stretching exercises suitable for all fitness levels.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:23:01.885760+06:00\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Advanced HIIT Cardio Blast (Updated)\",\n            \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:22:54.761424+06:00\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Beginner Full Body Strength\",\n            \"description\": \"A comprehensive full-body workout designed for beginners focusing on compound movements. Includes squats, deadlifts, bench press, and rows. Perfect for building foundational strength and muscle mass.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:22:30.727832+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Workout Plan Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Workout Plan Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:51:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "428"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 4,\n    \"title\": \"Powerlifting Program - 12 Weeks\",\n    \"description\": \"Structured 12-week powerlifting program focused on increasing your squat, bench press, and deadlift maxes. Includes progressive overload, deload weeks, and accessory work for optimal strength gains.\",\n    \"created_by\": 19,\n    \"created_by_name\": \"David Martinez\",\n    \"gym_branch\": 2,\n    \"gym_branch_name\": \"Location 2\",\n    \"is_active\": false,\n    \"created_at\": \"2026-01-15T17:23:18.660228+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Task Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Task Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:52:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1525"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"workout_plan\": 5,\n            \"workout_plan_title\": \"Core and Abs Sculpting\",\n            \"member\": 13,\n            \"member_name\": \"Ryan Lee\",\n            \"status\": \"COMPLETED\",\n            \"due_date\": \"2025-01-12\",\n            \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout. (updated)\",\n            \"completed_at\": \"2025-01-12T23:45:00+06:00\"\n        },\n        {\n            \"id\": 5,\n            \"workout_plan\": 1,\n            \"workout_plan_title\": \"Beginner Full Body Strength\",\n            \"member\": 15,\n            \"member_name\": \"Kevin Harris\",\n            \"status\": \"IN_PROGRESS\",\n            \"due_date\": \"2025-01-15\",\n            \"notes\": \"Working on squat depth and deadlift technique. Client responds well to coaching cues.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 4,\n            \"workout_plan\": 3,\n            \"workout_plan_title\": \"Yoga Flow for Flexibility\",\n            \"member\": 15,\n            \"member_name\": \"Kevin Harris\",\n            \"status\": \"PENDING\",\n            \"due_date\": \"2025-01-18\",\n            \"notes\": \"First yoga session scheduled. Client requested focus on lower back flexibility.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 3,\n            \"workout_plan\": 2,\n            \"workout_plan_title\": \"Advanced HIIT Cardio Blast (Updated)\",\n            \"member\": 13,\n            \"member_name\": \"Ryan Lee\",\n            \"status\": \"IN_PROGRESS\",\n            \"due_date\": \"2025-01-16\",\n            \"notes\": \"Client is halfway through the HIIT program. Showing excellent endurance improvements.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 2,\n            \"workout_plan\": 1,\n            \"workout_plan_title\": \"Beginner Full Body Strength\",\n            \"member\": 17,\n            \"member_name\": \"Chris Rodriguez\",\n            \"status\": \"COMPLETED\",\n            \"due_date\": \"2025-01-10\",\n            \"notes\": \"Great progress! Client completed all sets with proper form. Ready to increase weight next session.\",\n            \"completed_at\": \"2025-01-11T00:30:00+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trainer",
+			"item": [
+				{
+					"name": "Get Trainer Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/profile/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Trainer Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:13:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 19,\n    \"email\": \"triner@gmail.com\",\n    \"first_name\": \"David\",\n    \"last_name\": \"Martinez\",\n    \"role\": \"TRAINER\",\n    \"gym_branch\": 2,\n    \"gym_branch_name\": \"Location 2\",\n    \"phone_number\": \"555-0202\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T17:06:36.526776+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Trainer Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"old_password\": \"triner.bd..com.2026\",\r\n  \"new_password\": \"triner.bd..com.2027\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}} /auth/change-password/",
+							"host": [
+								"{{base_url}} "
+							],
+							"path": [
+								"auth",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Trainer Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"old_password\": \"triner.bd..com.2026\",\r\n  \"new_password\": \"triner.bd..com.2027\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}} /auth/change-password/",
+									"host": [
+										"{{base_url}} "
+									],
+									"path": [
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:16:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Password updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View My Activity Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/activity-logs/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"activity-logs",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View My Activity Logs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/activity-logs/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"activity-logs",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:18:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 29,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T17:07:51.077396+06:00\",\n            \"user\": 19\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Branch Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Branch Members",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:21:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1011"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 4,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 17,\n            \"email\": \"chris.rodriguez@example.com\",\n            \"first_name\": \"Chris\",\n            \"last_name\": \"Rodriguez\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"phone_number\": \"555-0309\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:42:25.739870+06:00\"\n        },\n        {\n            \"id\": 15,\n            \"email\": \"kevin.harris@example.com\",\n            \"first_name\": \"Kevin\",\n            \"last_name\": \"Harris\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"phone_number\": \"555-0307\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:42:01.188542+06:00\"\n        },\n        {\n            \"id\": 13,\n            \"email\": \"ryan.lee@example.com\",\n            \"first_name\": \"Ryan\",\n            \"last_name\": \"Lee\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"phone_number\": \"555-0305\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:42.128693+06:00\"\n        },\n        {\n            \"id\": 11,\n            \"email\": \"daniel.thomas@example.com\",\n            \"first_name\": \"Daniel\",\n            \"last_name\": \"Thomas\",\n            \"role\": \"MEMBER\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"phone_number\": \"555-0303\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T16:41:24.923889+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Workout Plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Beginner Full Body Strength\",\r\n    \"description\": \"A comprehensive full-body workout designed for beginners focusing on compound movements. Includes squats, deadlifts, bench press, and rows. Perfect for building foundational strength and muscle mass.\",\r\n    \"is_active\": true\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Workout Plan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Beginner Full Body Strength\",\r\n    \"description\": \"A comprehensive full-body workout designed for beginners focusing on compound movements. Includes squats, deadlifts, bench press, and rows. Perfect for building foundational strength and muscle mass.\",\r\n    \"is_active\": true\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:22:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "424"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Beginner Full Body Strength\",\n    \"description\": \"A comprehensive full-body workout designed for beginners focusing on compound movements. Includes squats, deadlifts, bench press, and rows. Perfect for building foundational strength and muscle mass.\",\n    \"created_by\": 19,\n    \"created_by_name\": \"David Martinez\",\n    \"gym_branch\": 2,\n    \"gym_branch_name\": \"Location 2\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T17:22:30.727832+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Workout Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Workout Plans",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:24:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2157"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 5,\n            \"title\": \"Core and Abs Sculpting\",\n            \"description\": \"Targeted core workout featuring planks, Russian twists, leg raises, and bicycle crunches. Build a strong, defined midsection while improving overall stability and posture in just 20 minutes.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:23:26.842183+06:00\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Powerlifting Program - 12 Weeks\",\n            \"description\": \"Structured 12-week powerlifting program focused on increasing your squat, bench press, and deadlift maxes. Includes progressive overload, deload weeks, and accessory work for optimal strength gains.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": false,\n            \"created_at\": \"2026-01-15T17:23:18.660228+06:00\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Yoga Flow for Flexibility\",\n            \"description\": \"Gentle yoga sequences focusing on improving flexibility, balance, and mindfulness. Includes sun salutations, warrior poses, and deep stretching exercises suitable for all fitness levels.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:23:01.885760+06:00\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Advanced HIIT Cardio Blast\",\n            \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:22:54.761424+06:00\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Beginner Full Body Strength\",\n            \"description\": \"A comprehensive full-body workout designed for beginners focusing on compound movements. Includes squats, deadlifts, bench press, and rows. Perfect for building foundational strength and muscle mass.\",\n            \"created_by\": 19,\n            \"created_by_name\": \"David Martinez\",\n            \"gym_branch\": 2,\n            \"gym_branch_name\": \"Location 2\",\n            \"is_active\": true,\n            \"created_at\": \"2026-01-15T17:22:30.727832+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Plan Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Plan Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:25:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "430"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"title\": \"Advanced HIIT Cardio Blast\",\n    \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\n    \"created_by\": 19,\n    \"created_by_name\": \"David Martinez\",\n    \"gym_branch\": 2,\n    \"gym_branch_name\": \"Location 2\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T17:22:54.761424+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Plan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Advanced HIIT Cardio Blast (Updated)\",\r\n    \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\r\n    \"is_active\": true\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workouts/plans/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"plans",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Plan",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Advanced HIIT Cardio Blast (Updated)\",\r\n    \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\r\n    \"is_active\": true\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/workouts/plans/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"plans",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:26:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "440"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"title\": \"Advanced HIIT Cardio Blast (Updated)\",\n    \"description\": \"High-intensity interval training program combining burpees, mountain climbers, jump squats, and sprint intervals. Designed to maximize fat burning and improve cardiovascular endurance in 30-minute sessions.\",\n    \"created_by\": 19,\n    \"created_by_name\": \"David Martinez\",\n    \"gym_branch\": 2,\n    \"gym_branch_name\": \"Location 2\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T17:22:54.761424+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Assign Task to Member",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Task to Member",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"workout_plan\": 1,\r\n    \"member\": 17,\r\n    \"status\": \"COMPLETED\",\r\n    \"due_date\": \"2025-01-10\",\r\n    \"notes\": \"Great progress! Client completed all sets with proper form. Ready to increase weight next session.\",\r\n    \"completed_at\": \"2025-01-10T18:30:00Z\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:35:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "317"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"workout_plan\": 1,\n    \"workout_plan_title\": \"Beginner Full Body Strength\",\n    \"member\": 17,\n    \"member_name\": \"Chris Rodriguez\",\n    \"status\": \"COMPLETED\",\n    \"due_date\": \"2025-01-10\",\n    \"notes\": \"Great progress! Client completed all sets with proper form. Ready to increase weight next session.\",\n    \"completed_at\": \"2025-01-11T00:30:00+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:37:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1515"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 5,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"workout_plan\": 5,\n            \"workout_plan_title\": \"Core and Abs Sculpting\",\n            \"member\": 13,\n            \"member_name\": \"Ryan Lee\",\n            \"status\": \"COMPLETED\",\n            \"due_date\": \"2025-01-12\",\n            \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout.\",\n            \"completed_at\": \"2025-01-12T23:45:00+06:00\"\n        },\n        {\n            \"id\": 5,\n            \"workout_plan\": 1,\n            \"workout_plan_title\": \"Beginner Full Body Strength\",\n            \"member\": 15,\n            \"member_name\": \"Kevin Harris\",\n            \"status\": \"IN_PROGRESS\",\n            \"due_date\": \"2025-01-15\",\n            \"notes\": \"Working on squat depth and deadlift technique. Client responds well to coaching cues.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 4,\n            \"workout_plan\": 3,\n            \"workout_plan_title\": \"Yoga Flow for Flexibility\",\n            \"member\": 15,\n            \"member_name\": \"Kevin Harris\",\n            \"status\": \"PENDING\",\n            \"due_date\": \"2025-01-18\",\n            \"notes\": \"First yoga session scheduled. Client requested focus on lower back flexibility.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 3,\n            \"workout_plan\": 2,\n            \"workout_plan_title\": \"Advanced HIIT Cardio Blast (Updated)\",\n            \"member\": 13,\n            \"member_name\": \"Ryan Lee\",\n            \"status\": \"IN_PROGRESS\",\n            \"due_date\": \"2025-01-16\",\n            \"notes\": \"Client is halfway through the HIIT program. Showing excellent endurance improvements.\",\n            \"completed_at\": null\n        },\n        {\n            \"id\": 2,\n            \"workout_plan\": 1,\n            \"workout_plan_title\": \"Beginner Full Body Strength\",\n            \"member\": 17,\n            \"member_name\": \"Chris Rodriguez\",\n            \"status\": \"COMPLETED\",\n            \"due_date\": \"2025-01-10\",\n            \"notes\": \"Great progress! Client completed all sets with proper form. Ready to increase weight next session.\",\n            \"completed_at\": \"2025-01-11T00:30:00+06:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Task Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Task Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:38:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"workout_plan\": 5,\n    \"workout_plan_title\": \"Core and Abs Sculpting\",\n    \"member\": 13,\n    \"member_name\": \"Ryan Lee\",\n    \"status\": \"COMPLETED\",\n    \"due_date\": \"2025-01-12\",\n    \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout.\",\n    \"completed_at\": \"2025-01-12T23:45:00+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"workout_plan\": 5,\r\n    \"workout_plan_title\": \"Core and Abs Sculpting\",\r\n    \"member\": 13,\r\n    \"member_name\": \"Ryan Lee\",\r\n    \"status\": \"COMPLETED\",\r\n    \"due_date\": \"2025-01-12\",\r\n    \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout. (updated)\",\r\n    \"completed_at\": \"2025-01-12T23:45:00+06:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/:id/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								":id",
+								""
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Task",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"workout_plan\": 5,\r\n    \"workout_plan_title\": \"Core and Abs Sculpting\",\r\n    \"member\": 13,\r\n    \"member_name\": \"Ryan Lee\",\r\n    \"status\": \"COMPLETED\",\r\n    \"due_date\": \"2025-01-12\",\r\n    \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout. (updated)\",\r\n    \"completed_at\": \"2025-01-12T23:45:00+06:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/:id/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:39:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "319"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"workout_plan\": 5,\n    \"workout_plan_title\": \"Core and Abs Sculpting\",\n    \"member\": 13,\n    \"member_name\": \"Ryan Lee\",\n    \"status\": \"COMPLETED\",\n    \"due_date\": \"2025-01-12\",\n    \"notes\": \"Completed core workout with modifications for lower back sensitivity. Excellent engagement throughout. (updated)\",\n    \"completed_at\": \"2025-01-12T23:45:00+06:00\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Member",
+			"item": [
+				{
+					"name": "Get Member Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/profile/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Member Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/profile/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"profile",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:42:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 20,\n    \"email\": \"member@gmail.com\",\n    \"first_name\": \"David\",\n    \"last_name\": \"Martinez\",\n    \"role\": \"MEMBER\",\n    \"gym_branch\": 1,\n    \"gym_branch_name\": \"Location 1\",\n    \"phone_number\": \"555-0202\",\n    \"is_active\": true,\n    \"created_at\": \"2026-01-15T17:07:18.339229+06:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Change Member Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"old_password\": \"member.bd..com.2027\",\r\n  \"new_password\": \"member.bd..com.2026\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/change-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"change-password",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Change Member Password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"old_password\": \"member.bd..com.2026\",\r\n  \"new_password\": \"member.bd..com.2027\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/change-password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:43:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Password updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "View My Activity Logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/auth/activity-logs/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"activity-logs",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "View My Activity Logs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/auth/activity-logs/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"activity-logs",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:45:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "213"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 30,\n            \"action\": \"LOGIN\",\n            \"model_name\": \"User\",\n            \"object_id\": null,\n            \"details\": null,\n            \"ip_address\": \"127.0.0.1\",\n            \"created_at\": \"2026-01-15T17:40:52.220220+06:00\",\n            \"user\": 20\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List My Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workouts/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workouts",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List My Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/workouts/tasks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"workouts",
+										"tasks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 15 Jan 2026 11:45:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": []\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
