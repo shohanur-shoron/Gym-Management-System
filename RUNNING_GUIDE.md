@@ -2,6 +2,15 @@
 
 This guide explains how to set up and run the Gym Management System locally.
 
+## Admin Login Information (Important)
+
+For evaluation purposes, use the following admin credentials to access the system:
+
+**Email**: admin@gmail.com
+**Password**: 1324
+
+This information is essential for accessing the APIs and evaluating the system functionality.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:

@@ -6,6 +6,15 @@ A comprehensive Django-based gym management system with role-based access contro
 
 This Gym Management System is a web application built with Django and Django REST Framework that enables efficient management of gym operations. The system includes features for user management, gym branch administration, workout planning, and task assignment.
 
+## Admin Login Information (Important)
+
+For evaluation purposes, use the following admin credentials to access the system:
+
+**Email**: admin@gmail.com
+**Password**: 1324
+
+This information is essential for accessing the APIs and evaluating the system functionality.
+
 ## Features
 
 - **Role-Based Access Control**: Four distinct user roles (Admin, Manager, Trainer, Member) with specific permissions

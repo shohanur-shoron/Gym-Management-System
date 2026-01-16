@@ -4,6 +4,15 @@ This document provides a comprehensive overview of all available API endpoints i
 
 For an interactive API documentation experience, visit: [Postman API Documentation](https://documenter.getpostman.com/view/37259871/2sBXVhDWbG)
 
+## Admin Login Information (Important)
+
+For evaluation purposes, use the following admin credentials to access the system:
+
+**Email**: admin@gmail.com
+**Password**: 1324
+
+This information is essential for accessing the APIs and evaluating the system functionality.
+
 ## Authentication
 
 This API uses JWT (JSON Web Token) authentication. To access protected endpoints, include the access token in the Authorization header:
