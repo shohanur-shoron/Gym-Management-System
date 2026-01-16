@@ -11,7 +11,7 @@ This Gym Management System is a web application built with Django and Django RES
 For evaluation purposes, use the following admin credentials to access the system:
 
 **Email**: admin@gmail.com
-**Password**: 1324
+**Password**: 1234
 
 This information is essential for accessing the APIs and evaluating the system functionality.
 
